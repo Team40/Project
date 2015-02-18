@@ -8,6 +8,22 @@
 </head>
 <body>
 
+<% flash.each do |name, msg| %>
+	<% if msg == "updated" %>
+		<script type="text/javascript">
+			window.alert("Your article has been updated.")
+		</script>
+	<% end %>
+	<% if msg == "deleted" %>
+		<script type="text/javascript">
+			window.alert("Your article has been deleted.")
+		</script>
+	<% end %>
+<% end %>
+
+
+
+
 <%= yield %>
 
 </body>

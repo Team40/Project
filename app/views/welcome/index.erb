@@ -2,12 +2,24 @@
 
 <p>
   Welcome!
+
+  The time is now: <%= Time.now %>
+
 </p>
 
 <pre>
 	<%= Cowsay.say("Hello!") %>
 </pre>
 
+
+
 <% for i in 0..(ENV['TIMES'] ? ENV['TIMES'].to_i : 2) do %>
 	<p>Hello World #<%= i %>!</p>
 <% end %> 
+
+
+<% @articles.each do |article| %>
+	<h2><%= article.title %></h2>
+	<p><%= article.content %></p>
+	<hr />
+<% end %>
