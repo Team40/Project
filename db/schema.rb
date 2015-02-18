@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150217005825) do
 
+  drop_table 'articles' unless !ActiveRecord::Base.connection.table_exists? 'articles'
+
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
