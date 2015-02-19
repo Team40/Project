@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap/tooltip
+//= require bootstrap/tab
 //= require_tree .
 
 $('[data-toggle="tooltip"]').tooltip();
@@ -21,3 +22,8 @@ $('[data-toggle="tooltip"]').tooltip();
 $('.fancybox').fancybox({
     padding: 10
 });
+
+$('.nav-tabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
