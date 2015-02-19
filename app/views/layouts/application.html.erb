@@ -13,8 +13,51 @@
     <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" %>
 </head>
 <body>
-
-<%= yield %>
-
+    <div class="navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="brand">
+                        <%= image_tag "logo.png" %>
+                    </div>
+                    <ul class="navlinks">
+                        <li class="active">
+                            <a href="">FIELDS</a>
+                        </li>
+                        <li>
+                            <a href="">YOUR INSTITUTION</a>
+                        </li>
+                        <li>
+                            <a href="">AUTHORS YOU FOLLOW</a>
+                        </li>
+                        <li>
+                            <a href="">CONTACT US</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <div class="login-signup">
+                        <ul>
+                            <li>
+                                <a href="">LOGIN</a>
+                            </li>
+                            <li>
+                                <a class="btn btn-primary" href="">SIGN UP</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <%= yield %>
+    </div>
+    <footer>
+        <div class="container">
+            <p>Copyright &copy; 2015. ScienceOwl. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <%= javascript_include_tag "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js" %>
 </body>
 </html>

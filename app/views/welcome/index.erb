@@ -1,11 +1,32 @@
-<h1>Home page!</h1>
-<p>More changes here!</p>
-<p>Another change</p>
-<p>A third change!</p>
-<p>more changes more changes</p>
-adfa
-sf
-f
-as
-fdsa
-f
+<div class="breadcrumb">
+    <ul>
+        <li><a href="">All Fields</a>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</li>
+        <li><a href="">Biology</a>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</li>
+        <li><a href="">Stem Cell Biology</a></li>
+    </ul>
+</div>
+<div class="publications-list">
+    <% @publications.each do |publication| %>
+        <div class="publication">
+            <span class="category"><%= publication[0]["category"] %></span>
+            <h1 class="title"><%= publication[0]["title"] %></h1>
+            <p class="excerpt">The coronary arteries are one of the medically most relevant vessels. They are often affected in diseases like atherosclerosis leading to blockage of the coronary arteries eventually results in heart attacks. If we want to regenerate the coronary arteries or help them during disease...</p>
+            <div class="clearfix">
+                <div class="author clearfix">
+                    <div class="image">
+                        <%= image_tag "default.jpg" %>
+                    </div>
+                    <div class="info">
+                        <h3 class="name">KS Volz</h3>
+                        <span class="pub-date">Published on 1/3/15</span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <a class="upvote" data-toggle="tooltip" title="Upvote"><i class="fa fa-arrow-up"></i>&nbsp;49</a>
+                    <a class="comments" data-toggle="tooltip" title="Comment"><i class="fa fa-comments"></i>&nbsp;8</a>
+                    <a class="bookmark" data-toggle="tooltip" title="Bookmark"><i class="fa fa-bookmark"></i>&nbsp;</a>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>
