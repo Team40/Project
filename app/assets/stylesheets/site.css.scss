@@ -1,0 +1,83 @@
+/*==========
+Navbar
+==========*/
+.navbar {
+    background-color: #035B6A;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border: 0px;
+    -webkit-box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+    -o-box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.2);
+    font-family: 'Open Sans';
+
+    .brand {
+        display: inline-block;
+        float: left;
+        margin-right: 25px;
+        padding: 16px 0px 17px 0px;
+        width: 140px;
+    }
+
+    .navlinks {
+        display: inline-block;
+        float: left;
+
+        li {
+            display: inline-block;
+            float: left;
+
+            &.active {
+                a {
+                    background-color: #004B58;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        a {
+            color: #ffffff;
+            display: block;
+            font-size: 0.85em;
+            font-weight: 200;
+            padding: 19px 20px 18px 20px;
+            -webkit-transition: 0.25s;
+            -moz-transition: 0.25s;
+            -o-transition: 0.25s;
+            transition: 0.25s;
+
+            &:hover {
+                background: #03515e;
+                text-decoration: none;
+            }
+        }
+    }
+
+    li {
+        display: inline-block;
+        list-style: none;
+    }
+
+    .login-signup {
+        padding: 13px 0px 12px 0px;
+        text-align: right;
+
+        ul li:first-child a {
+            color: #ffffff;
+            font-size: 0.8em;
+            margin-right: 15px;
+        }
+    }
+}
+
+/*==========
+Footer
+==========*/
+footer {
+    font-weight: 100;
+    margin-top: 50px;
+    padding: 25px 0px;
+    text-align: center;
+}

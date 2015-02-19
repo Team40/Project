@@ -13,7 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sprockets
+//= require bootstrap/tooltip
 //= require_tree .
 
 $('[data-toggle="tooltip"]').tooltip();
+
+$('.fancybox').fancybox({
+    padding: 10
+});

@@ -9,7 +9,7 @@
     <% @publications.each do |publication| %>
         <div class="publication">
             <span class="category"><%= publication[0]["category"] %></span>
-            <h1 class="title"><%= publication[0]["title"] %></h1>
+            <%= link_to publication[0]["title"], { :controller => :pages, :action => :publication}, :class => 'title' %>
             <p class="excerpt">The coronary arteries are one of the medically most relevant vessels. They are often affected in diseases like atherosclerosis leading to blockage of the coronary arteries eventually results in heart attacks. If we want to regenerate the coronary arteries or help them during disease...</p>
             <div class="clearfix">
                 <div class="author clearfix">
@@ -30,6 +30,3 @@
         </div>
     <% end %>
 </div>
-<script>
-$('[data-toggle="tooltip"]').tooltip();
-</script>
