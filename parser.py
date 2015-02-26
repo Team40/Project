@@ -7,21 +7,26 @@ import webbrowser
 tree = ElementTree.parse('output.xml')
 root = tree.getroot()
 
-print "IDList:"
+
+
+print ("IDList:")
 
 IDs = []
 
 for idList in root:
 	for ID in idList.iter('Id'):
-		print ID.text
+		print (ID.text)
 		IDs.extend([ID.text])
 
 count = 0
 urls = []
+u = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
+
 for ID in IDs:
-	print "ID #%d = %s" % (count, ID)
-	url = "http://www.ncbi.nlm.nih.gov/pubmed/%s\n" % ID
-	webbrowser.get('open -a /Applications/Google\ Chrome.app %s').open_new(url)
+	print ("ID #%d = %s" % (count, ID))
+	print (u)
+
+	#webbrowser.get('open -a /Applications/Google\ Chrome.app %s').open_new(url)
 	urls.extend(url)
 	count+=1
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE eSearchResult PUBLIC "-//NLM//DTD esearch 20060628//EN" "http://eutils.ncbi.nlm.nih.gov/eutils/dtd/20060628/esearch.dtd">
+<eSearchResult><Count>13528</Count><RetMax>20</RetMax><RetStart>0</RetStart><IdList>
+<Id>25710968</Id>
+<Id>25710967</Id>
+<Id>25710966</Id>
+<Id>25710965</Id>
+<Id>25710964</Id>
+<Id>25710963</Id>
+<Id>25710962</Id>
+<Id>25710961</Id>
+<Id>25710960</Id>
+<Id>25710959</Id>
+<Id>25710958</Id>
+<Id>25710957</Id>
+<Id>25710956</Id>
+<Id>25710955</Id>
+<Id>25710954</Id>
+<Id>25710953</Id>
+<Id>25710952</Id>
+<Id>25710951</Id>
+<Id>25710950</Id>
+<Id>25710949</Id>
+</IdList><TranslationSet/><TranslationStack>   <TermSet>    <Term>2015/02/21[EDAT]</Term>    <Field>EDAT</Field>    <Count>0</Count>    <Explode>N</Explode>   </TermSet>   <TermSet>    <Term>2015/02/25[EDAT]</Term>    <Field>EDAT</Field>    <Count>0</Count>    <Explode>N</Explode>   </TermSet>   <OP>RANGE</OP>  </TranslationStack><QueryTranslation>2015/02/21[EDAT] : 2015/02/25[EDAT]</QueryTranslation></eSearchResult>
