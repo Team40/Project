@@ -9,14 +9,14 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-<<<<<<< HEAD
 //= require bootstrap/tooltip
 //= require bootstrap/tab
 //= require_tree .
+//
+
 
 $('[data-toggle="tooltip"]').tooltip();
 
@@ -28,9 +28,8 @@ $('.nav-tabs a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
 })
-=======
+
 //= require bootstrap-sprockets
 //= require_tree .
 
 $('[data-toggle="tooltip"]').tooltip();
->>>>>>> 83ef84a28900d5253facde1e3d5ec39bc87e4c1f
