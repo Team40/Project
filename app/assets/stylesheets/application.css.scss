@@ -12,10 +12,12 @@
  *
  *= require_self
  */
-
+ 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 @import "_scaffolds";
 @import "site";
-@import "publications.css.scss";
+@import "feed";
+@import "publication";
+@import "jquery.fancybox";
