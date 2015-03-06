@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
   # GET /welcome
   def index
   	#Default page for /welcome
+<<<<<<< HEAD
   	@publications = Publication.all
 
     f = File.open("/Users/zachmeza/Web/ruby-getting-started/scripts/datafile.txt")
@@ -25,6 +26,9 @@ class WelcomeController < ApplicationController
     end
 
     @pubs = pubs
+=======
+  	@articles = Article.all
+>>>>>>> 83ef84a28900d5253facde1e3d5ec39bc87e4c1f
 
     publications = [
         ["title" => "Pericytes Are the Progenitors of Epicardial-Derived Smooth Muscle Cells in the Heart", "category" => "Stem Cell Biology"],

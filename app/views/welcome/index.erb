@@ -6,6 +6,7 @@
     </ul>
 </div>
 <div class="publications-list">
+<<<<<<< HEAD
     <% @pubs.each do |publication| %>
         <div class="publication">
             <span class="category"><%= publication[0]["category"] %></span>
@@ -13,14 +14,26 @@
             <p class="excerpt">
             <%= publication[0]["abstract"] %>
             </p>
+=======
+    <% @publications.each do |publication| %>
+        <div class="publication">
+            <span class="category"><%= publication[0]["category"] %></span>
+            <h1 class="title"><%= publication[0]["title"] %></h1>
+            <p class="excerpt">The coronary arteries are one of the medically most relevant vessels. They are often affected in diseases like atherosclerosis leading to blockage of the coronary arteries eventually results in heart attacks. If we want to regenerate the coronary arteries or help them during disease...</p>
+>>>>>>> 83ef84a28900d5253facde1e3d5ec39bc87e4c1f
             <div class="clearfix">
                 <div class="author clearfix">
                     <div class="image">
                         <%= image_tag "default.jpg" %>
                     </div>
                     <div class="info">
+<<<<<<< HEAD
                         <h3 class="name"><%= publication[0]["authors"][0,100] %></h3>
                         <span class="pub-date">Created on <%= publication[0]["date"] %></span>
+=======
+                        <h3 class="name">KS Volz</h3>
+                        <span class="pub-date">Published on 1/3/15</span>
+>>>>>>> 83ef84a28900d5253facde1e3d5ec39bc87e4c1f
                     </div>
                 </div>
                 <div class="actions">
@@ -31,4 +44,11 @@
             </div>
         </div>
     <% end %>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+<script>
+$('[data-toggle="tooltip"]').tooltip();
+</script>
+>>>>>>> 83ef84a28900d5253facde1e3d5ec39bc87e4c1f
