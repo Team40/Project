@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sprockets
 //= require bootstrap/tooltip
 //= require bootstrap/tab
 //= require_tree .
