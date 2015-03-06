@@ -23,8 +23,13 @@ Entrez.email = "zmeza@stanford.edu"
 handle = Entrez.efetch("pubmed", id=IDs, retmode="xml")
 records = Entrez.parse(handle)
 count = 0
+score = 500
 for record in records:
 	#f.write(str(record))
+	if(score > 100):
+		score -= 10
+	elif(score > 10):
+		score -= 1
 
 	if 'Abstract' in record['MedlineCitation']['Article']:
 		count += 1
@@ -32,6 +37,9 @@ for record in records:
 		title = record['MedlineCitation']['Article']['ArticleTitle']
 		pmid = record['MedlineCitation']['PMID']
 		abstract = record['MedlineCitation']['Article']['Abstract']['AbstractText'][0]
+
+		date = record['MedlineCitation']['DateCreated']['Month'] + "/" + record['MedlineCitation']['DateCreated']['Day'] + "/" + record['MedlineCitation']['DateCreated']['Year']
+
 
 		f.write("Title #%s: " % str(count))
 		f.write(title + "\n")
@@ -81,7 +89,7 @@ for record in records:
 		f.write("Abstract: ")
 		f.write(abstract + "\n\n\n")
 
-		df.write("<<%s>><<%s>><<%s>><<%s>>\n" % (pmid, title, author_s, abstract))
+		df.write("<<%s>><<%s>><<%s>><<%s>><<%s>><<%s>>\n" % (pmid, title, author_s, abstract, date, score))
 handle.close()
 
 
