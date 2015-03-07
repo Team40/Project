@@ -1,0 +1,83 @@
+<div class="breadcrumb clearfix">
+    <ul>
+        <li><a href="">All Fields</a>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</li>
+        <li><a href="">Biology</a>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</li>
+        <li><a href="">Stem Cell Biology</a>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</li>
+        <li><a href="">Pericytes Are the Progenitors of Epicardial-Derived Smooth Muscle Cells in the Heart</a></li>
+    </ul>
+</div>
+<div class="publication-wrapper">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="info">
+                <h1 class="title"><%= @publication.title %></h1>
+                <div class="isec fields">
+                    <label>Fields:</label>
+                    <ul>
+                        <li>
+                            <a href="">Stem Cell Biology</a>,
+                        </li>
+                        <li>
+                            <a href="">Cardiology</a>,
+                        </li>
+                        <li>
+                            <a href="">Vascular Biology</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="isec authors">
+                    <label>Authors:</label>
+                    <ul>
+                        <li> <%= @publication.authors %> </li>
+                    </ul>
+                </div>
+                <div class="isec affiliation">
+                    <label>Affiliation:</label>
+                    <span>Institute for Stem Cell Biology and Regenerative Medicine, Stanford University</span>
+                </div>
+                <ul class="tags">
+                    <li>
+                        <a href="">coronary arteries</a>
+                    </li>
+                    <li>
+                        <a href="">smooth muscle cells</a>
+                    </li>
+                    <li>
+                        <a href="">pericytes</a>
+                    </li>
+                    <li>
+                        <a href="">coronary artery disease</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="minfo" role="tabpanel">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#abstract" aria-controls="abstract" role="tab" data-toggle="tab">Abstract</a></li>
+                    <li role="presentation"><a href="#wordBank" aria-controls="wordBank" role="tab" data-toggle="tab">Word Bank</a></li>
+                    <li role="presentation"><a href="#addMaterials" aria-controls="addMaterials" role="tab" data-toggle="tab">Additional Materials</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="abstract">
+                        <%= @publication.abstract %>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="wordBank">word bank</div>
+                    <div role="tabpanel" class="tab-pane" id="addMaterials">additional materials</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="sidebar">
+                <div class="well">
+                    <h3 class="title">Videos</h3>
+                    <div class="videos">
+                        <a class="video fancybox fancybox.iframe" rel="group" href="http://www.youtube.com/embed/v9VSDfAhVYU?autoplay=1">
+                            <span class="pbtn"><i class="fa fa-play"></i></span>
+                            <img src="http://img.youtube.com/vi/v9VSDfAhVYU/0.jpg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="outter"></div>
+</div>

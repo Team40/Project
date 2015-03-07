@@ -1,0 +1,34 @@
+<div class="breadcrumb">
+    <ul>
+        <li><a href="">All Fields</a>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</li>
+        <li><a href="">Biology</a>&nbsp;<i class="fa fa-angle-double-right"></i>&nbsp;</li>
+        <li><a href="">Stem Cell Biology</a></li>
+    </ul>
+</div>
+<div class="publications-list">
+    <% @pubs.each do |publication| %>
+        <div class="publication">
+            <span class="category"></span>
+            <%= link_to publication.title, "/publication/" + (publication.pmid).to_s, :class => 'title' %>
+            <p class="excerpt">
+            <%= publication.abstract %>
+            </p>
+            <div class="clearfix">
+                <div class="author clearfix">
+                    <div class="image">
+                        <%= image_tag "default.jpg" %>
+                    </div>
+                    <div class="info">
+                        <h3 class="name"><%= publication.authors[0,75] %></h3>
+                        <span class="pub-date">Created on <%= publication.date %></span>
+                    </div>
+                </div>
+                <div class="actions">
+                    <a class="upvote" data-toggle="tooltip" title="Upvote"><i class="fa fa-arrow-up"></i>&nbsp;<%= rand(publication.score*19/20...publication.score) %></a>
+                    <a class="comments" data-toggle="tooltip" title="Comment"><i class="fa fa-comments"></i>&nbsp;<%= rand(50) %></a>
+                    <a class="bookmark" data-toggle="tooltip" title="Bookmark"><i class="fa fa-bookmark"></i>&nbsp;</a>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>

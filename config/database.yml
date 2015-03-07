@@ -25,6 +25,7 @@ development:
   <<: *default
   database: ruby-getting-started_development
 
+
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -78,8 +79,16 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+
+  #"dbname=d79or75nv4adtj host=ec2-54-204-45-65.compute-1.amazonaws.com port=5432 user=wpbimmjictpsls password=sCeoopZhD1i2M9l2MDF-JYCS5Y sslmode=require"
+
 production:
   <<: *default
-  database: ruby-getting-started_production
-  username: ruby-getting-started
-  password: <%= ENV['RUBY-GETTING-STARTED_DATABASE_PASSWORD'] %>
+  database: d79or75nv4adtj #ruby-getting-started_production
+  username: wpbimmjictpsls
+  password: sCeoopZhD1i2M9l2MDF-JYCS5Y #<%= ENV['RUBY-GETTING-STARTED_DATABASE_PASSWORD'] %>
+  host: ec2-54-204-45-65.compute-1.amazonaws.com 
+  port: 5432
+
+
+

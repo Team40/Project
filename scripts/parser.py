@@ -8,6 +8,7 @@ import webbrowser
 tree = ElementTree.parse('output.xml')
 root = tree.getroot()
 f = open('articles.txt', 'w')
+r = open('raw.txt', 'w')
 df = open('datafile.txt', 'w')
 
 
@@ -25,7 +26,7 @@ records = Entrez.parse(handle)
 count = 0
 score = 500
 for record in records:
-	#f.write(str(record))
+	r.write(str(record))
 	if(score > 100):
 		score -= 10
 	elif(score > 10):

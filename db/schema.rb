@@ -22,9 +22,10 @@ ActiveRecord::Schema.define(version: 20150306083242) do
     t.text     "authors"
     t.string   "date"
     t.text     "abstract"
+    t.integer  "score"
+
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "score"
   end
 
   create_table "widgets", force: true do |t|
