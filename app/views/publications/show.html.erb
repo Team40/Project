@@ -58,10 +58,19 @@
                 </ul>
                 <div class="tab-content">
                     <div role="tabpanel" class="tab-pane active" id="abstract">
-                        <%= @publication.abstract %>
+                        <% if(@publication.pmid == 25037571) %>
+                            <p><label>Context:</label> The coronary arteries are one of the medically most relevant vessels. They are often affected in diseases like atherosclerosis leading to blockage of the coronary arteries eventually results in heart attacks. If we want to regenerate the coronary arteries or help them during disease we first need to know how they are build up.</p>
+                            <p><label>What is Known:</label> It is known that epicardial cells, which are the cells on the surface of the heart, eventually turn into smooth muscle cells deep in the heart. Smooth muscle cells are an essential cell type around the coronary arteries which is very important for homeostasis and is often affected in diseases like atherosclerosis. </p>
+                            <p><label>What is Not Known:</label> Since epicardial cells and coronary artery smooth muscle cells never appear together we know that there must be a progenitor cell linking both cell types.</p>
+                            <p><label>Experimental Question:</label> We wanted to discover the progenitor cell derived from the epicardium which differentiates into coronary artery smooth muscle cells.</p>
+                            <p><label>Main Findings:</label> We discovered that pericytes, which are an important cell type wrapping around small blood vessels, are the progenitor cells to smooth muscle cells. Epicardial cells differentiate into pericytes and pericytes differentiate into coronary artery smooth muscle cells when they are located at a specialized zone in the heart called the remodeling zone and receive arterial blood flow.</p>
+                            <p><label>Implications:</label> If we know where smooth muscle cells in the heart come from, then we might be able to block this pathway during diseases with excessive smooth muscle cells (like atherosclerosis). Furthermore, since we show that pericytes still stick around in adult hearts they may be natural progenitors which could be recruited after injury or for smooth muscle cell homeostasis.</p>
+                        <% else %>
+                            <%= @publication.abstract %>
+                        <% end %>
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="wordBank">word bank</div>
-                    <div role="tabpanel" class="tab-pane" id="addMaterials">additional materials</div>
+                    <div role="tabpanel" class="tab-pane" id="wordBank">Definitions here</div>
+                    <div role="tabpanel" class="tab-pane" id="addMaterials">Additional Materials (conference videos, materials used, etc.)</div>
                 </div>
             </div>
         </div>
