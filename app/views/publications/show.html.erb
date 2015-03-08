@@ -65,12 +65,42 @@
                             <p><label>Experimental Question:</label> We wanted to discover the progenitor cell derived from the epicardium which differentiates into coronary artery smooth muscle cells.</p>
                             <p><label>Main Findings:</label> We discovered that pericytes, which are an important cell type wrapping around small blood vessels, are the progenitor cells to smooth muscle cells. Epicardial cells differentiate into pericytes and pericytes differentiate into coronary artery smooth muscle cells when they are located at a specialized zone in the heart called the remodeling zone and receive arterial blood flow.</p>
                             <p><label>Implications:</label> If we know where smooth muscle cells in the heart come from, then we might be able to block this pathway during diseases with excessive smooth muscle cells (like atherosclerosis). Furthermore, since we show that pericytes still stick around in adult hearts they may be natural progenitors which could be recruited after injury or for smooth muscle cell homeostasis.</p>
+                        <% elsif (@publication.pmid == 2898810) %>
+                            <p><label>Context:</label> The search for the blood forming stem cell began when the scientists realized that animals, who were given a lethal dose of irradiation suffered bone marrow failure and that this failure could be reversed by injecting unirradiated bone marrow cells.</p>
+                            <p><label>What is Known:</label> The blood of mice receiving bone marrow transplantation contained many different blood cell types. Certain cells within the donor blood could restore the entire blood system. </p>
+                            <p><label>What is Not Known:</label> Experiments could not distinguish between cells that are self-renewing and multipotent progenitor cells that are non-self renewing but have the potential to make different cell types. </p>
+                            <p><label>Experimental Question:</label> What is the identity of the self-renewing and pluripotent blood forming stem cell? Can these cells be purified and transplanted into irradiated mice without a blood system and reconstitute the whole blood system? </p>
+                            <p><label>Main Findings:</label> We are the first to isolate the blood forming stem cell in mice with a variety of markers. These cells can proliferate and differentiate into different blood lineages including myelomonocytic cells, B-cells or T-cells. 30 of these blood forming stem cells could save 50% of lethally irradiated mice (mice which will die after radiation treatment) and when examining the blood of these surviving mice they constituted of all different blood lineages. </p>
+                            <p><label>Implications:</label> The isolation of a pure population of self renewing and pluripotent blood forming stem cells is a requirement for understanding the developmental biology of the blood lymphoid system and also would be instrumental for a number of gene cell and organ replacement therapies depended on bone marrow transplantation. </p>
                         <% else %>
                             <%= @publication.abstract %>
                         <% end %>
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="wordBank">Definitions here</div>
-                    <div role="tabpanel" class="tab-pane" id="addMaterials">Additional Materials (conference videos, materials used, etc.)</div>
+                    <div role="tabpanel" class="tab-pane" id="wordBank">
+                        <p><b>CFU-S</b>: Spleen colony forming unit; all of the cells composing the CFU-S were derived from a single cell. </p>
+                        <p><b>CFU-T</b>: Thymus colony forming unit; all of the cells composing the CFU-S were derived from a single cell. </p>
+                        <p><b>Clonal colony</b>:  a population of cells that derive from the same ancestral line.</p>
+                        <p><b>Hematapoietic stem cell</b>: Blood forming stem cell.</p>
+                        <p><b>Ly5.2</b>: historical name for CD45, now called protein tyrosine phosphatease receptor type c, It is a type I transmembrane protein that is in various forms present on all differentiated hematopoietic cells, except erythrocytes and plasma cells, that assists in the activation of those cells (a form of co-stimulation).</p>
+                        <p><b>Multipotential hematopoietic progenitors</b>: blood progenitor cells that can differentiate into different lineages.</p>
+                        <p><b>Pluripotent</b>: can differentiate into each of the cells in the 3 germ layers.</p>
+                        <p><b>Self renewing</b>: when it divides, one of its daughter cells can give rise to itself, but the other daughter cell can give rise to a more mature or differentiated cell.</p>
+                        <p><b>Sca-1</b>: Stem Cell antigen-1 18-kDa mouse glycosyl phosphatidylinositol-anchored cell surface protein of the LY6 gene family. It is now a common biological marker used to identify blood forming stem cells along with other markers.</p>
+                        <p><b>Thy1</b>: Thy-1 cell surface antige; CD90; The antigen Thy-1 was the first T cell marker to be identified.Gr1: expressed on monocytes, neutrophils, subsets of macrophages, plasmacytoid dendritic cells, and T cells.</p>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="addMaterials">
+                        <b>Reagents:</b>
+                        <p><a href="https://www.lifetechnologies.com/order/catalog/product/14175095">Hanks balanced salt solution (HBSS)</a></p>
+                        <p><a href="http://www.sigmaaldrich.com/catalog/product/sigma/f2442?lang=en&region=US">Fetal Calf Serum (FCS)</a></p>
+                        <p><b>Antibodies:</b></p>
+                        <p><a href="http://www.sigmaaldrich.com/catalog/product/sigma/f7634?lang=en&region=US">Sheep antibodies to Fuorescenin</a></p>
+                        <p><a href="http://www.stemcell.com/en/Products/All-Products/AntiMouse-Gr1-Antibody-Clone-RB68C5.aspx">Gr1</a></p>
+                        <p><a href="http://www.biolegend.com/fitc-anti-mouse-ly-6a-e-sca-1-antibody-3894.html">Sca1</a></p>
+                        <p><a href="http://www.ebioscience.com/mouse-cd11b-antibody-purified-m1-70.html">Mac1</a></p>
+                        <p><a href="http://www.biolegend.com/index.php?page=pro_sub_cat&action=search&criteria=Thy1.1">Thy1.1</a></p>
+                        <p><a href="http://www.abcam.com/goat-rabbit-igg-hl-phycoerythrin-preadsorbed-ab72465.html">Phycoerythrin conjugated goat antiserum to rat immunoglobulin</a></p>
+                        <p><a href="https://www.vectorlabs.com/catalog.aspx?prodID=1732">Biotinylated Goat Anti-Rat IgG Antibody</a></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -79,10 +109,17 @@
                 <div class="well">
                     <h3 class="title">Videos</h3>
                     <div class="videos">
-                        <a class="video fancybox fancybox.iframe" rel="group" href="http://www.youtube.com/embed/v9VSDfAhVYU?autoplay=1">
-                            <span class="pbtn"><i class="fa fa-play"></i></span>
-                            <img src="http://img.youtube.com/vi/v9VSDfAhVYU/0.jpg" />
-                        </a>
+                        <% if (@publication.pmid == 2898810) %>
+                            <a class="video fancybox fancybox.iframe" rel="group" href="http://www.youtube.com/embed/0tJVcNjG5mA?autoplay=1">
+                                <span class="pbtn"><i class="fa fa-play"></i></span>
+                                <img src="http://img.youtube.com/vi/0tJVcNjG5mA/0.jpg" />
+                            </a>
+                        <% else %>
+                            <a class="video fancybox fancybox.iframe" rel="group" href="http://www.youtube.com/embed/v9VSDfAhVYU?autoplay=1">
+                                <span class="pbtn"><i class="fa fa-play"></i></span>
+                                <img src="http://img.youtube.com/vi/v9VSDfAhVYU/0.jpg" />
+                            </a>
+                        <% end %>
                     </div>
                 </div>
             </div>
