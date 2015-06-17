@@ -1,0 +1,30 @@
+How to ruby:
+
+
+
+
+View on local server:
+	rails s
+	--Navigate to localhost:3000
+
+
+Git:
+	git add .
+	git commit -m "update message here"
+	git push
+
+	git pull
+
+
+Deploy to live site:
+	git push heroku master
+
+
+Database:
+
+	Visit localhost:3000/update to read in from files
+
+	Then, to push to the live site:
+		heroku pg:reset
+		heroku pg:push ruby-getting-started_development DATABASE_URL
+
