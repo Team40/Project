@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <div class="actions">
-                            <a class="upvote" data-toggle="tooltip" title="Upvote"><i class="fa fa-arrow-up"></i>&nbsp;<%= rand(publication.score*19/20...publication.score) %></a>
+                            <a class="upvote" data-toggle="tooltip" title="Upvote"><i class="fa fa-arrow-up"></i>&nbsp;<%= 1000 + rand(publication.score*19/20...publication.score) %></a>
                             <a class="comments" data-toggle="tooltip" title="Comment"><i class="fa fa-comments"></i>&nbsp;<%= rand(50) %></a>
                             <a class="bookmark" data-toggle="tooltip" title="Bookmark"><i class="fa fa-bookmark"></i>&nbsp;</a>
                         </div>
