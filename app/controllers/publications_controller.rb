@@ -4,6 +4,9 @@ class PublicationsController < ApplicationController
 	  	#@publications = Publication.all
 	    #f = File.open("/Users/zachmeza/Web/ruby-getting-started/scripts/datafile.txt")
 	    @pubs = Publication.all
+	    if(params.has_key?(:tag1))
+	    	@data = params[:tag1]
+	    end
 	end
 
 
@@ -29,6 +32,7 @@ class PublicationsController < ApplicationController
 
 
 	def update
+		Publication.delete_all
 		f = File.open("/Users/zachmeza/Web/ruby-getting-started/scripts/datafile.txt")
 
 
@@ -52,7 +56,6 @@ class PublicationsController < ApplicationController
 		@publication.save
 
 	    f.each_line do |line|
-
 	    	vals = line.split("<<")
 			id = vals[1].sub(">>", "")
 			title = vals[2].sub(">>", "")

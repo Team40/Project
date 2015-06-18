@@ -7,9 +7,9 @@ import webbrowser
 
 tree = ElementTree.parse('output.xml')
 root = tree.getroot()
-f = open('articles2.txt', 'w')
-r = open('raw2.txt', 'w')
-df = open('datafile2.txt', 'w')
+f = open('articles.txt', 'w')
+r = open('raw.txt', 'w')
+df = open('datafile.txt', 'w')
 
 
 IDs = []
