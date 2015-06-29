@@ -1,0 +1,17 @@
+Scraper.sh -- Shell script that makes the HTTP request to retrieve the 2000 article IDs for the latest articles posted in PubMed and writes these to output.xml
+	-To change the number of article IDs returned, change the retmax parameter in the URL
+
+
+parser.py -- Python script that pulls each of the articles for the IDs in output.xml and parses the XML output
+	-Writes the articles' content in readable form to to articles.txt
+	-Writes the articles fields in parsing format to datafile.txt so that they can be read into the database
+		To read into the database, navigate to localhost:3000/update when running "rails s" (*** this probably isn't best-practice but provides an easy way to get the data from the python script's output into the local database *** -- in order to push the local database to the live site, see the README in the root directory) 
+			-To see/alter how this is done, navigate to app/controllers/publications_controller.rb
+
+	Article fields:
+		pmid: PubMed ID for the article
+		title: Article title
+		author_s: A string with comma separated names of the authors of the paper (First initial + last Name)
+		abstract: The article's abstract
+		date: The date the article was posted to PubMed
+		score: An arbitrary score assigned to articles as a placeholder for user-voted scores (yet to be implemented).

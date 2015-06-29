@@ -1,6 +1,4 @@
-How to ruby:
-
-
+This readme details the general git, rails, and heroku commands to deploy the site both locally and remotely. For details on the scripts that pull data from PubMed, navigate to the "scripts" folder's Readme.
 
 
 View on local server:
@@ -21,10 +19,8 @@ Deploy to live site:
 
 
 Database:
+	Visit localhost:3000/update to read in from files to postgres
 
-	Visit localhost:3000/update to read in from files
-
-	Then, to push to the live site:
+	Then, to push local database to the live site:
 		heroku pg:reset
 		heroku pg:push ruby-getting-started_development DATABASE_URL
-

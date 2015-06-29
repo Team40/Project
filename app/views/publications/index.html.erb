@@ -9,17 +9,25 @@
     <div class="col-md-3">
         <div class="filters-wrapper">
             <label>Filter By</label>
-                 <form>
+                 <form id = "tags">
                    <t>Please enter your desired tags.
                    <br>
-                   <input type="text" name="tag1">
-                   <input type="submit"/>
+                   <input type="text" name="tag1" id="tag1">
+                   <br><input type="submit"/>
                  </form>
-<!--                  <% if @data == nil %>
-                    data was nil
-                 <% else %>
-                    <%= @data %>
-                 <% end %> -->
+                 <img src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/rounded-glossy-black-icons-alphanumeric/074184-rounded-glossy-black-icon-alphanumeric-plus-sign-simple.png" height="20" onclick="addField()">
+
+                <script>
+                var i = 1;
+                function addField() {
+                    var x = document.getElementsByName('tag'+i)[0];
+                    var input1 = document.createElement("input");
+                    input1.setAttribute("type","text");
+                    i++;
+                    input1.setAttribute("name","tag" + i );
+                    x.appendChild(input1);
+                }
+                </script>
         </div>
     </div>
     <div class="col-md-9">
